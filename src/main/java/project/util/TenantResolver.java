@@ -12,6 +12,10 @@ public class TenantResolver {
     }
 
     public Tenant resolve(String tenantId){
+        if (tenantId==null || tenantId.isBlank()){
+            throw new UnknownTenantException("TenantId cannot be null or blank");
+        }
+
         Tenant tenant = tenantStore.get(tenantId);
 
         if (tenant==null){
