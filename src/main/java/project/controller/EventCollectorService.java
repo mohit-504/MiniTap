@@ -4,7 +4,7 @@ package project.controller;
 import project.model.Event;
 import project.router.EventRouter;
 import project.util.EventMetrics;
-import project.util.Profiler;
+// import project.util.Profiler;
 import project.util.TenantResolver;
 import project.validation.EventValidator;
 
@@ -23,14 +23,14 @@ public class EventCollectorService {
 
     public void collect(Event event) {
 
-        Profiler profiler = new Profiler();
-        profiler.start();
+        // Profiler profiler = new Profiler();
+        // profiler.start();
 
         validator.validate(event);
         tenantResolver.resolve(event.tenantId());
         router.route(event);
         metrics.increment(event.eventType());
 
-        profiler.stop("Event Processing");
+        // profiler.stop("Event Processing");
     }
 }
