@@ -1,0 +1,5 @@
+# application-dev.yaml
+event:
+  tenants:
+    - tenant-dev-1
+    - tenant-dev-2

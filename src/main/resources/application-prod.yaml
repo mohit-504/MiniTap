@@ -1,0 +1,5 @@
+# application-prod.yaml
+event:
+  tenants:
+    - tenant-prod-1
+    - tenant-prod-2

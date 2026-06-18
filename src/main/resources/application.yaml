@@ -1,3 +1,4 @@
+# application.yaml
 spring:
   application:
     name: event-ingestion-service
@@ -5,3 +6,9 @@ spring:
 server:
   error:
     include-stacktrace: never
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
