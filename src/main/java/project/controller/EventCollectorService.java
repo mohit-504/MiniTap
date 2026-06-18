@@ -1,6 +1,8 @@
 // EventCollectorService.java
 package project.controller;
 
+import org.springframework.stereotype.Service;
+
 import project.model.Event;
 import project.router.EventRouter;
 import project.util.EventMetrics;
@@ -8,6 +10,7 @@ import project.util.EventMetrics;
 import project.util.TenantResolver;
 import project.validation.EventValidator;
 
+@Service
 public class EventCollectorService {
     private final EventValidator validator;
     private final TenantResolver tenantResolver;

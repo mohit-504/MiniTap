@@ -5,8 +5,11 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 
+import org.springframework.stereotype.Component;
+
 import project.model.EventType;
 
+@Component
 public class EventMetrics {
     private final Map<EventType, AtomicLong> counters = new ConcurrentHashMap<>();
 

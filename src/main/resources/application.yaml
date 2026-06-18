@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: event-ingestion-service
+
+server:
+  error:
+    include-stacktrace: never

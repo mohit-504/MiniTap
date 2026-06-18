@@ -1,9 +1,12 @@
 // TenantResolver.java 
 package project.util;
 
+import org.springframework.stereotype.Component;
+
 import project.exception.UnknownTenantException;
 import project.model.Tenant;
 
+@Component
 public class TenantResolver {
     private final TenantStore tenantStore;
 

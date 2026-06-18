@@ -4,8 +4,11 @@ package project.util;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import org.springframework.stereotype.Component;
+
 import project.model.Tenant;
 
+@Component
 public class TenantStore {
     private final Map<String, Tenant> tenants = new ConcurrentHashMap<>();
 
